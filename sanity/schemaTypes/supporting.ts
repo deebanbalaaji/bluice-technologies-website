@@ -1,0 +1,7 @@
+import { defineField, defineType } from "sanity";
+
+export const page = defineType({ name: "page", title: "Page", type: "document", fields: [defineField({ name: "title", type: "string", validation: (rule) => rule.required() }), defineField({ name: "slug", type: "slug", options: { source: "title" } }), defineField({ name: "description", type: "text" }), defineField({ name: "body", type: "array", of: [{ type: "block" }] })] });
+export const person = defineType({ name: "person", title: "Person", type: "document", fields: [defineField({ name: "name", type: "string" }), defineField({ name: "role", type: "string" }), defineField({ name: "bio", type: "text" }), defineField({ name: "portrait", type: "image", options: { hotspot: true } })] });
+export const testimonial = defineType({ name: "testimonial", title: "Testimonial", type: "document", fields: [defineField({ name: "quote", type: "text" }), defineField({ name: "name", type: "string" }), defineField({ name: "role", type: "string" }), defineField({ name: "company", type: "string" })] });
+export const clientLogo = defineType({ name: "clientLogo", title: "Client logo", type: "document", fields: [defineField({ name: "name", type: "string" }), defineField({ name: "logo", type: "image" }), defineField({ name: "url", type: "url" })] });
+export const callToAction = defineType({ name: "callToAction", title: "Call to action", type: "object", fields: [defineField({ name: "label", type: "string" }), defineField({ name: "href", type: "string" }), defineField({ name: "context", type: "text" })] });
