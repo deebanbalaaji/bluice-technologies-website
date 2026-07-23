@@ -758,34 +758,19 @@ em,
 }
 .brand-lockup {
   display: grid;
-  grid-template-columns: 40px auto;
-  gap: 12px;
+  grid-template-columns: 30px auto;
+  gap: 7px;
   align-items: center;
 }
-.brand-lockup img {
-  width: 40px;
-  height: 40px;
+.brand-symbol {
+  width: 30px;
+  height: 33px;
+  object-fit: contain;
 }
-.brand-type {
-  display: grid;
-  gap: 3px;
-  line-height: 1;
-}
-.brand-type strong {
-  color: var(--on-deep);
-  font-family: "Literata", Georgia, serif;
-  font-size: 1.16rem;
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 1;
-}
-.brand-type small {
-  color: var(--signal-on-deep);
-  font:
-    500 0.54rem/1.1 "IBM Plex Mono",
-    monospace;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+.brand-wordmark {
+  width: 106px;
+  height: auto;
+  object-fit: contain;
 }
 .header-actions {
   display: flex;
@@ -2573,20 +2558,6 @@ em,
     --shell: calc(100% - 32px);
     --section: 76px;
   }
-  .brand-lockup {
-    grid-template-columns: 34px auto;
-    gap: 9px;
-  }
-  .brand-lockup img {
-    width: 34px;
-    height: 34px;
-  }
-  .brand-type strong {
-    font-size: 0.94rem;
-  }
-  .brand-type small {
-    font-size: 0.42rem;
-  }
   .header-actions {
     gap: 10px;
   }
@@ -3039,6 +3010,19 @@ em,
   color: var(--footer-meta);
   font-size: 0.7rem;
 }
+.classic-footer-release {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+.site-release {
+  font:
+    500 0.62rem/1.4 "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 .classic-footer-base nav {
   display: flex;
   gap: 24px;
@@ -3234,6 +3218,11 @@ em,
     flex-direction: column;
     padding-block: 14px 18px;
     gap: 6px;
+  }
+  .classic-footer-release {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
   }
   .classic-footer-base nav {
     display: flex;
@@ -4146,21 +4135,15 @@ em,
     height: 64px;
   }
   .brand-lockup {
-    grid-template-columns: 34px auto;
-    gap: 9px;
+    grid-template-columns: 27px auto;
+    gap: 6px;
   }
-  .brand-lockup img {
-    width: 34px;
-    height: 34px;
+  .brand-symbol {
+    width: 27px;
+    height: 30px;
   }
-  .brand-type strong {
-    font-size: 0.94rem;
-    letter-spacing: -0.025em;
-    white-space: nowrap;
-  }
-  .brand-type small {
-    display: block;
-    font-size: 0.42rem;
+  .brand-wordmark {
+    width: 84px;
   }
   .header-actions {
     gap: 3px;
@@ -4306,17 +4289,48 @@ em,
 }
 
 @media (max-width: 350px) {
-  .brand-type strong {
-    font-size: 0.91rem;
+  .brand-lockup {
+    grid-template-columns: 23px auto;
+    gap: 4px;
   }
-  .brand-type small {
-    font-size: 0.39rem;
-    letter-spacing: 0.12em;
+  .brand-symbol {
+    width: 23px;
+    height: 26px;
+  }
+  .brand-wordmark {
+    width: 72px;
+  }
+}
+
+@media (max-width: 330px) {
+  .brand-lockup {
+    grid-template-columns: auto;
+    gap: 0;
+  }
+  .brand-symbol {
+    display: none;
+  }
+  .brand-wordmark {
+    width: 82px;
   }
 }
 
 /* Tablets use the same compact utility bar as mobile, with more room for the brand. */
 @media (min-width: 641px) and (max-width: 1120px) {
+  .brand-lockup {
+    grid-template-columns: 28px auto;
+    gap: 6px;
+  }
+
+  .brand-symbol {
+    width: 28px;
+    height: 31px;
+  }
+
+  .brand-wordmark {
+    width: 100px;
+  }
+
   .header-actions {
     gap: 4px;
   }
