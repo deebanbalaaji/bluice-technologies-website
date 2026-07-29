@@ -27,7 +27,7 @@ export default function AccessibilityStatementPage() {
         <p>Third-party content, including an optional Calendly scheduling frame, may not provide the same level of accessibility as the rest of the website. Approved client media or documents may also contain limitations outside Bluice Technologies’ direct control. We will provide an alternative way to access essential information or complete an action when reasonably possible.</p>
 
         <h2>5. Feedback and assistance</h2>
-        <p>If you encounter a barrier, need information in another format or cannot complete an action, email <a href="mailto:hello@northline.example">hello@northline.example</a>. Please include the page address, what you were trying to do and the browser or assistive technology you used. We aim to acknowledge accessibility requests within two business days.</p>
+        <p>If you encounter a barrier, need information in another format or cannot complete an action, email <a href="mailto:hello@bluice.in">hello@bluice.in</a>. Please include the page address, what you were trying to do and the browser or assistive technology you used. We aim to acknowledge accessibility requests within two business days.</p>
 
         <h2>6. Review</h2>
         <p>We review accessibility as the website changes and use a combination of automated checks, keyboard testing and manual inspection. This statement will be updated when material improvements or known limitations change.</p>

@@ -39,6 +39,7 @@
     "node_modules",
     "supabase",
     "bluice-website",
-    "rent-ops-mobile"
+    "rent-ops-mobile",
+    ".open-next"
   ]
 }

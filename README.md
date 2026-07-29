@@ -1,20 +1,24 @@
 # Bluice Technologies website
 
-A corporate product-engineering website built with Next.js, Sanity content schemas, case studies, qualified lead capture and Calendly handoff.
+Corporate product-engineering website built with Next.js App Router, React, and TypeScript. Page and case-study content is statically rendered, while the lead endpoint remains ready for server-side email and CRM integrations.
 
-## Run locally
+## Local development
 
 ```bash
-npm install
-cp .env.example .env.local
+npm ci
 npm run dev
 ```
 
-The website works with seeded content without external services. Add Sanity credentials to enable CMS case studies. Configure either `CRM_WEBHOOK_URL` or the Resend variables before accepting production enquiries. Replace placeholder email addresses, case-study evidence and the Calendly URL before launch.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Quality checks
+## Verification
 
 ```bash
 npm run typecheck
+npm run lint
 npm run build
 ```
+
+## Deployment
+
+The repository includes OpenNext and Wrangler configuration for Cloudflare. Configure deployment secrets outside the repository; never expose email, CRM, or scheduling credentials in browser code.

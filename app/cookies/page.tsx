@@ -15,7 +15,7 @@ export default function CookiePolicyPage() {
         <p className="legal-intro">This policy explains how Bluice Technologies uses cookies, browser storage and similar technologies on this website.</p>
 
         <h2>1. What this website stores</h2>
-        <p>The website uses local browser storage to remember your selected colour theme and country or region. These preferences are stored on your device so the website can present the appropriate appearance, currency and regional information when you return.</p>
+        <p>The website uses local browser storage to remember your selected country or region. This preference is stored on your device so the website can present the appropriate currency and regional information when you return.</p>
 
         <h2>2. Essential technologies</h2>
         <p>Hosting and security providers may use strictly necessary cookies or similar technologies to deliver pages, protect forms, prevent abuse and maintain website reliability. These technologies are used only where needed to provide the service you request.</p>
@@ -27,10 +27,10 @@ export default function CookiePolicyPage() {
         <p>After a successful consultation enquiry, the website may display a Calendly scheduling frame. Calendly may use its own cookies or similar technologies when that frame loads. Calendly controls those technologies under its own privacy and cookie notices.</p>
 
         <h2>5. Your choices</h2>
-        <p>Use the Cookie settings link in the footer to change optional Analytics and Scheduling permissions at any time. You can also remove stored theme, region and consent preferences through your browser’s site-data settings. Doing so resets those choices to their defaults.</p>
+        <p>Use the Cookie settings link in the footer to change optional Analytics and Scheduling permissions at any time. You can also remove stored region and consent preferences through your browser’s site-data settings. Doing so resets those choices to their defaults.</p>
 
         <h2>6. Updates and contact</h2>
-        <p>We may update this policy when the website or its service providers change. Questions about website storage can be sent to <a href="mailto:hello@northline.example">hello@northline.example</a>.</p>
+        <p>We may update this policy when the website or its service providers change. Questions about website storage can be sent to <a href="mailto:hello@bluice.in">hello@bluice.in</a>.</p>
 
         <p className="legal-note">This policy should be reviewed by qualified legal counsel before production launch and whenever analytics, advertising or additional embedded services are introduced.</p>
       </article>

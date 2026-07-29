@@ -44,7 +44,7 @@ export default function TermsPage() {
         <p>These terms are governed by the laws of India because Bluice Technologies operates from India. Courts with jurisdiction over Bluice Technologies’ principal place of business will have jurisdiction, subject to mandatory rights that apply where you are located. We may update these terms by publishing a revised version with a new effective date.</p>
 
         <h2>10. Contact</h2>
-        <p>Questions about these terms can be sent to <a href="mailto:hello@northline.example">hello@northline.example</a>.</p>
+        <p>Questions about these terms can be sent to <a href="mailto:hello@bluice.in">hello@bluice.in</a>.</p>
 
         <p className="legal-note">These website terms should be reviewed by qualified legal counsel before production launch and updated with Bluice Technologies’ registered legal name, address and jurisdiction details.</p>
       </article>

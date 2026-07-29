@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ClientMarks } from "@/components/ClientMarks";
 import { CTA } from "@/components/CTA";
-import { getCaseStudies } from "@/lib/sanity";
+import { getCaseStudies } from "@/lib/case-studies";
 
 export const metadata: Metadata = { title: "Work", description: "Product engineering case studies measured by operational outcomes.", alternates: { canonical: "/work" }, openGraph: { title: "Selected product work", description: "Product engineering case studies measured by operational outcomes.", url: "/work" } };
 
@@ -17,6 +16,14 @@ const industries = [
   ["Public services", "Citizen services, case management and internal operations", "Accessibility, compliance and accountable delivery"],
 ];
 
+const technologyCapabilities = [
+  { domain: "Product interfaces", role: "Complex workflows and customer-facing products", technologies: ["React", "Next.js", "Vue", "Angular", "TypeScript"] },
+  { domain: "Mobile products", role: "Native and cross-platform product delivery", technologies: ["Flutter", "Dart", "Swift", "Kotlin", "Android"] },
+  { domain: "Application systems", role: "Services, APIs, integrations, and business logic", technologies: ["Node.js", "Python", "Java", ".NET", "GraphQL"] },
+  { domain: "Cloud & delivery", role: "Reliable infrastructure and release operations", technologies: ["Cloudflare", "Google Cloud", "Docker", "Kubernetes", "GitHub"] },
+  { domain: "Data & content", role: "Operational data, search, and managed content", technologies: ["PostgreSQL", "MongoDB", "Redis", "Supabase", "Sanity"] },
+] as const;
+
 export default async function WorkPage() {
   const studies = await getCaseStudies();
   return <main id="main">
@@ -26,7 +33,17 @@ export default async function WorkPage() {
     </header>
     <section className="industry-capabilities" id="industries"><div className="section shell"><header><div><p className="eyebrow">Industry capability</p><h2>Products we can take live.</h2></div><p>Our delivery model adapts to the operating rules of each sector. These are capability areas—not claims of completed client work.</p></header><div className="industry-ledger">{industries.map(([name, products, priorities]) => <article key={name}><h3>{name}</h3><div><span className="label">What we build</span><p>{products}</p></div><div><span className="label">What matters</span><p>{priorities}</p></div></article>)}</div></div></section>
     <section className="published-evidence" id="evidence"><div className="section shell published-evidence-grid"><header><p className="eyebrow">Published evidence</p><h2>Decisions, releases, and results.</h2><p>Each story connects an operating problem to the product decisions made, what shipped, and the measured change.</p></header><div className="work-hero-index"><p className="label">Case studies / {String(studies.length).padStart(2, "0")}</p><ol>{studies.map((study, index) => <li key={study.slug}><Link href={`/work/${study.slug}`}><span>{String(index + 1).padStart(2, "0")} · {study.industry}</span><strong>{study.title}</strong><b>{study.metrics[0]?.value} {study.metrics[0]?.label}</b><i className="work-evidence-arrow" aria-hidden="true">↗</i></Link></li>)}</ol></div></div></section>
-    <section className="work-library shell"><header className="work-client-proof"><p className="eyebrow">Companies we’ve worked with</p><ClientMarks /></header></section>
+    <section className="work-technology" id="technology">
+      <div className="section shell">
+        <header className="work-technology-head">
+          <div><p className="eyebrow">Technology capability</p><h2>Engineering choices shaped by the product.</h2></div>
+          <p>We work across modern web, mobile, cloud, data, and platform ecosystems. The stack follows the operating constraint—not the other way around.</p>
+        </header>
+        <div className="technology-ledger">
+          {technologyCapabilities.map((capability, index) => <article key={capability.domain}><span className="index">{String(index + 1).padStart(2, "0")}</span><h3>{capability.domain}</h3><p>{capability.role}</p><ul>{capability.technologies.map((technology) => <li key={technology}>{technology}</li>)}</ul></article>)}
+        </div>
+      </div>
+    </section>
     <CTA title="Your product will have different constraints." context="That is where useful work starts. Bring us the context, not a polished brief." />
   </main>;
 }

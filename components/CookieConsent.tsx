@@ -23,8 +23,8 @@ export function CookieConsent() {
       setManaging(true);
       setOpen(true);
     };
-    window.addEventListener("northline:consent-settings", showSettings);
-    return () => window.removeEventListener("northline:consent-settings", showSettings);
+    window.addEventListener("bluice:consent-settings", showSettings);
+    return () => window.removeEventListener("bluice:consent-settings", showSettings);
   }, []);
 
   if (!ready || (saved && !open)) return null;
@@ -41,7 +41,7 @@ export function CookieConsent() {
         <div><p className="label">Privacy controls</p><h2 id="cookie-title">Your choice, before optional tracking.</h2></div>
         {saved && <button className="cookie-close" type="button" aria-label="Close cookie settings" onClick={() => setOpen(false)}>×</button>}
       </div>
-      <p id="cookie-description">We use essential storage for theme and regional preferences. Analytics and third-party scheduling stay off unless you allow them.</p>
+      <p id="cookie-description">We use essential storage for regional preferences. Analytics and third-party scheduling stay off unless you allow them.</p>
       <Link className="cookie-policy-link" href="/cookies">Read the Cookie Policy <span aria-hidden="true">↗</span></Link>
 
       {managing && <div className="cookie-preferences">

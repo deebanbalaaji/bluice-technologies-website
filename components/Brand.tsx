@@ -5,10 +5,10 @@ export function Brand() {
     <span className="brand-lockup">
       <Image
         className="brand-symbol"
-        src="/bluice-icon.png"
+        src="/bluice-logo-mark.png"
         alt=""
-        width="291"
-        height="320"
+        width="512"
+        height="512"
         priority
       />
       <Image

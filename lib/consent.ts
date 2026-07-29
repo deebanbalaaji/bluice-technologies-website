@@ -1,7 +1,7 @@
 export type Consent = { analytics: boolean; external: boolean };
 
-const key = "northline-consent";
-const eventName = "northline:consent";
+const key = "bluice-consent";
+const eventName = "bluice:consent";
 let cachedRaw: string | null | undefined;
 let cachedConsent: Consent | null = null;
 

@@ -40,7 +40,7 @@ export function LeadForm() {
   if (status === "success") return (
     <div className="calendar-reveal" aria-live="polite">
       <p className="label">Details received</p><h2>Choose a useful time.</h2><p>Your context is with our team. The next step is a focused 30-minute conversation.</p>
-      {process.env.NEXT_PUBLIC_CALENDLY_URL ? consent?.external ? <iframe title="Schedule a conversation with Bluice Technologies" src={calendly} onLoad={() => track("calendar_viewed")} /> : <div className="calendar-fallback"><p>Scheduling remains private until you allow the Calendly embed.</p><button className="button button-small" type="button" onClick={() => saveConsent({ analytics: consent?.analytics ?? false, external: true })}>Allow scheduling and continue</button><p>Or email <a href="mailto:hello@northline.example">hello@northline.example</a> and the team will arrange a time.</p></div> : <p className="calendar-fallback">Scheduling is being configured. Email <a href="mailto:hello@northline.example">hello@northline.example</a> and the team will arrange a time.</p>}
+      {process.env.NEXT_PUBLIC_CALENDLY_URL ? consent?.external ? <iframe title="Schedule a conversation with Bluice Technologies" src={calendly} onLoad={() => track("calendar_viewed")} /> : <div className="calendar-fallback"><p>Scheduling remains private until you allow the Calendly embed.</p><button className="button button-small" type="button" onClick={() => saveConsent({ analytics: consent?.analytics ?? false, external: true })}>Allow scheduling and continue</button><p>Or email <a href="mailto:hello@bluice.in">hello@bluice.in</a> and the team will arrange a time.</p></div> : <p className="calendar-fallback">Scheduling is being configured. Email <a href="mailto:hello@bluice.in">hello@bluice.in</a> and the team will arrange a time.</p>}
     </div>
   );
 
@@ -61,7 +61,7 @@ export function LeadForm() {
       </div></section>
       <label className="honeypot" hidden>Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
       <label className="consent"><input type="checkbox" name="consent" value="yes" required /><span>I agree that Bluice Technologies may use these details to respond to my enquiry.</span></label>
-      {status === "error" && <p className="form-error" role="alert">{message} You can also email <a href="mailto:hello@northline.example">hello@northline.example</a>.</p>}
+      {status === "error" && <p className="form-error" role="alert">{message} You can also email <a href="mailto:hello@bluice.in">hello@bluice.in</a>.</p>}
       <button className="button submit-button" disabled={status === "submitting"}>{status === "submitting" ? "Sending…" : "Send details and choose a time"}</button>
     </form>
   );

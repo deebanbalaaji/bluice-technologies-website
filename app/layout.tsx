@@ -11,7 +11,7 @@ import { MotionObserver } from "@/components/MotionObserver";
 import { RegionProvider } from "@/components/RegionProvider";
 import { CookieConsent } from "@/components/CookieConsent";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://northline.example";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bluice.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -22,17 +22,15 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [{ media: "(prefers-color-scheme: light)", color: "#f5f8fc" }, { media: "(prefers-color-scheme: dark)", color: "#0d1825" }],
+  themeColor: "#f6f6f3",
 };
 
 const organizationSchema = {
   "@context": "https://schema.org", "@type": "Organization", name: "Bluice Technologies", url: siteUrl,
-  email: "hello@northline.example", areaServed: "Worldwide",
+  email: "hello@bluice.in", areaServed: "Worldwide",
   knowsAbout: ["Product strategy", "UX design", "Software engineering", "Cloud platforms"],
 };
 
-const themeScript = `(function(){try{var saved=localStorage.getItem('northline-theme');var theme=saved==='light'||saved==='dark'?saved:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme}catch(e){}})()`;
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head><body><RegionProvider><a className="skip-link" href="#main">Skip to content</a><MotionObserver /><Header />{children}<Footer /><CookieConsent /></RegionProvider><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} /></body></html>;
+  return <html lang="en" data-scroll-behavior="smooth"><body><RegionProvider><a className="skip-link" href="#main">Skip to content</a><MotionObserver /><Header />{children}<Footer /><CookieConsent /></RegionProvider><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} /></body></html>;
 }

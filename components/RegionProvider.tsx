@@ -7,7 +7,7 @@ type Region = (typeof regions)[RegionCode];
 const RegionContext = createContext<{ code: RegionCode; region: Region }>({ code: "IN", region: regions.IN });
 const subscribe = () => () => {};
 const getRegion = (): RegionCode => {
-  const saved = localStorage.getItem("northline-region");
+  const saved = localStorage.getItem("bluice-region");
   return saved && saved in regions ? saved as RegionCode : "IN";
 };
 

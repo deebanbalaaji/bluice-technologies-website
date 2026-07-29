@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CTA } from "@/components/CTA";
-import { getCaseStudies, getCaseStudy } from "@/lib/sanity";
+import { getCaseStudies, getCaseStudy } from "@/lib/case-studies";
 
 export async function generateStaticParams() { return (await getCaseStudies()).map(({ slug }) => ({ slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const study = await getCaseStudy((await params).slug); return study ? { title: study.title, description: study.summary, alternates: { canonical: `/work/${study.slug}` }, openGraph: { title: study.title, description: study.summary, url: `/work/${study.slug}` } } : {}; }

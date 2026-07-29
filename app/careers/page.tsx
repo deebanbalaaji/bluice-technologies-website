@@ -36,7 +36,7 @@ Why Bluice Technologies:
 Availability:
 
 Regards,`;
-  return `mailto:careers@northline.example?${new URLSearchParams({ subject, body })}`;
+  return `mailto:careers@bluice.in?${new URLSearchParams({ subject, body })}`;
 }
 
 export default function CareersPage() {
@@ -101,7 +101,7 @@ export default function CareersPage() {
         <div className="shell">
           <p className="label">A considered introduction</p>
           <h2>Show us how you think.</h2>
-          <div><p>Send a short note and one or two examples. A polished portfolio helps, but the decisions behind the work matter more.</p><a href={careerMailto()}>careers@northline.example <span aria-hidden="true">↗</span></a></div>
+          <div><p>Send a short note and one or two examples. A polished portfolio helps, but the decisions behind the work matter more.</p><a href={careerMailto()}>careers@bluice.in <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
     </main>

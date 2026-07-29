@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Brand } from "./Brand";
-import { ThemeToggle } from "./ThemeToggle";
 import { SiteNavigation } from "./SiteNavigation";
 import { HeaderTools } from "./HeaderTools";
 import { RegionStatus } from "./RegionProvider";
@@ -14,8 +13,8 @@ export function Header() {
         <Link className="brand" href="/" aria-label="Bluice Technologies home"><Brand /></Link>
         <div className="header-actions">
           <SiteNavigation />
-          <div className="header-utility"><HeaderTools /><HeaderTools compact panelId="compact-header-search-panel" /><ThemeToggle /></div>
-          <TrackLink className="button button-small desktop-header-cta" href="/contact" event="cta_clicked" eventLabel="header">Connect</TrackLink>
+          <div className="header-utility"><HeaderTools /><HeaderTools compact panelId="compact-header-search-panel" /></div>
+          <TrackLink className="button button-small desktop-header-cta" href="/contact" event="cta_clicked" eventLabel="header">Contact us</TrackLink>
         </div>
       </div>
     </header>

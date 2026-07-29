@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Blueprint } from "@/components/Blueprint";
 import { CTA } from "@/components/CTA";
-import { ClientMarks } from "@/components/ClientMarks";
+import { HeroFilm } from "@/components/HeroFilm";
 import { TrackLink } from "@/components/TrackLink";
 import { services } from "@/lib/content";
-import { getCaseStudies } from "@/lib/sanity";
+import { getCaseStudies } from "@/lib/case-studies";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -14,12 +13,13 @@ export default async function Home() {
   const feedbackStudies = studies.filter((study) => study.testimonial).slice(0, 3);
   return (
     <main id="main">
-      <section className="hero shell">
-        <div className="hero-copy"><p className="eyebrow">Senior product engineering partner</p><h1>Complex products,<br /><em>made clear.</em></h1><p className="hero-lede">We turn operational complexity into dependable digital products—connecting strategy, design, engineering, and platform decisions in one accountable team.</p><div className="hero-actions"><TrackLink className="button" href="/contact" event="cta_clicked" eventLabel="hero">Connect with us</TrackLink><TrackLink className="text-link" href="/work" event="cta_clicked" eventLabel="hero-work">See shipped outcomes <span>↗</span></TrackLink></div><ul className="hero-signals" aria-label="How Bluice Technologies works"><li>Senior-led</li><li>Integrated delivery</li><li>Measured after release</li></ul></div>
-        <Blueprint />
+      <section className="hero hero-editorial hero-film">
+        <HeroFilm />
+        <div className="shell hero-film-layout">
+          <div className="hero-copy"><p className="eyebrow">Senior product engineering partner</p><h1>Complex products,<br /><em>made clear.</em></h1><p className="hero-lede">We turn operational complexity into dependable digital products—connecting strategy, design, engineering, and platform decisions in one accountable team.</p><div className="hero-actions"><TrackLink className="button" href="/contact" event="cta_clicked" eventLabel="hero">Connect with us</TrackLink><TrackLink className="text-link" href="/work" event="cta_clicked" eventLabel="hero-work">See shipped outcomes <span>↗</span></TrackLink></div></div>
+          <aside className="hero-editorial-note hero-film-brief"><p className="label">One accountable team</p><p>Strategy, design, engineering, and platform decisions stay connected through release.</p><span>Direction → Evidence → Product → Operation</span></aside>
+        </div>
       </section>
-
-      <section className="client-strip"><div className="shell"><p className="label">Trusted to clarify consequential work</p><ClientMarks /></div></section>
 
       <section className="section home-services"><div className="shell"><header className="home-section-head"><div><p className="eyebrow">Five connected capabilities</p><h2>One team across the product lifecycle.</h2></div><p>Engage us for a focused problem or connect the full journey. The advantage is continuity: each decision carries its context into the next.</p></header><div className="home-service-list">{services.map((service, index) => <TrackLink href={`/services#${service.slug}`} className="home-service-row" key={service.slug} event="service_explored" eventLabel={service.slug}><span className="index">0{index + 1}</span><div><h3>{service.name}</h3><p>{service.summary}</p></div><p className="home-service-stage">{service.stage}</p><span className="arrow">↗</span></TrackLink>)}</div><TrackLink className="text-link home-services-link" href="/services" event="service_explored" eventLabel="all-services">Explore all service details <span>↗</span></TrackLink></div></section>
 

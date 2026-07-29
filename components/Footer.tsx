@@ -10,19 +10,19 @@ export function Footer() {
   return (
     <footer className="site-footer classic-footer">
       <div className="shell classic-footer-main">
-        <div className="classic-footer-brand"><Link className="brand" href="/" aria-label="Bluice Technologies home"><Brand /></Link><p>Senior product strategy, design, engineering, and platform delivery in one accountable team.</p><span>{region.footerLine}</span></div>
+        <div className="classic-footer-brand"><Link className="brand" href="/" aria-label="Bluice Technologies home"><Brand /></Link><p>Senior product strategy, design, engineering, and platform delivery in one accountable team.</p><span>{region.footerLine}</span><nav className="footer-social" aria-label="Bluice Technologies social media"><a href="https://www.linkedin.com/company/bluice-technologies/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a><a href="https://www.instagram.com/bluicetechnologies/" target="_blank" rel="noreferrer">Instagram <span>↗</span></a><a href="https://www.youtube.com/@BluiceTechnologies" target="_blank" rel="noreferrer">YouTube <span>↗</span></a></nav></div>
         <div className="classic-footer-links">
-          <nav aria-label="Company"><p className="label">Company</p><Link href="/">Home</Link><Link href="/services">Services</Link><Link href="/work">Work</Link><Link href="/about">About</Link><Link href="/careers">Careers</Link></nav>
-          <address><p className="label">Contact</p><a href="mailto:hello@northline.example">hello@northline.example</a><Link href="/contact">Connect</Link><p>Replies within one business day.</p></address>
+          <nav aria-label="Company"><p className="label">Navigate</p><Link href="/">Home</Link><Link href="/services">What we do</Link><Link href="/work">Our work</Link><Link href="/about">Who we are</Link><Link href="/careers">Careers</Link></nav>
+          <address><p className="label">Get in touch</p><a href="mailto:hello@bluice.in">hello@bluice.in</a><Link href="/contact">Contact us</Link><p>Replies within one business day.</p></address>
         </div>
       </div>
-      <div className="shell classic-footer-cta"><p>Have a product problem worth solving?</p><Link href="/contact">Connect with us <span>↗</span></Link></div>
+      <div className="shell classic-footer-cta"><p>Have a product problem worth solving?</p><Link className="classic-footer-contact" href="/contact">Contact us <span>↗</span></Link></div>
       <div className="shell classic-footer-base">
         <div className="classic-footer-release">
           <span>© {new Date().getFullYear()} Bluice Technologies. All Rights Reserved.</span>
           <span className="site-release" title="Current website release and published update number">{SITE_RELEASE_LABEL}</span>
         </div>
-        <nav aria-label="Legal"><Link href="/terms">Terms &amp; Conditions</Link><Link href="/privacy">Privacy Policy</Link><Link href="/cookies">Cookie Policy</Link><button type="button" onClick={() => window.dispatchEvent(new Event("northline:consent-settings"))}>Cookie settings</button><Link href="/accessibility">Accessibility Statement</Link></nav>
+        <nav aria-label="Legal"><Link href="/terms">Terms &amp; Conditions</Link><Link href="/privacy">Privacy Policy</Link><Link href="/cookies">Cookie Policy</Link><button type="button" onClick={() => window.dispatchEvent(new Event("bluice:consent-settings"))}>Cookie settings</button><Link href="/accessibility">Accessibility Statement</Link></nav>
       </div>
     </footer>
   );

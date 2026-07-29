@@ -1,7 +1,58 @@
+# Bluice Technologies - Root .gitignore
+
+# Dependencies
 node_modules
+.pub-cache
+
+# Build outputs
 .next
+.open-next
+build
+dist
+*.tsbuildinfo
+
+# Environment files
 .env
 .env.local
-*.log
-*.tsbuildinfo
+.env.*.local
+dart_defines.local.json
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
 .DS_Store
+
+# Flutter
+.packages
+.dart_tool
+flutter_*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+*.lcov
+
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
+# Wrangler
+.wrangler
+
+# Unrelated local projects (not part of this website repository)
+bluice-website/
+rent-ops-mobile/
+CONTEXT.md

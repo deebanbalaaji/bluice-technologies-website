@@ -34,12 +34,12 @@ export function HeaderTools({ compact = false, panelId }: { compact?: boolean; p
 
   return (
     <div className={`header-tools${compact ? " header-tools-compact" : ""}`} onKeyDown={(event) => { if (event.key === "Escape" && open) { setOpen(false); trigger.current?.focus(); } }}>
-      <label className="country-control"><span className="sr-only">Country or region</span><select value={code} aria-label="Country or region" onChange={(event) => { localStorage.setItem("northline-region", event.target.value as RegionCode); window.location.reload(); }}>{Object.entries(regions).map(([value, region]) => <option value={value} key={value}>{value === "GB" ? "UK" : value}{compact ? "" : ` · ${region.currency}`}</option>)}</select></label>
+      <label className="country-control"><span className="sr-only">Country or region</span><select value={code} aria-label="Country or region" onChange={(event) => { localStorage.setItem("bluice-region", event.target.value as RegionCode); window.location.reload(); }}>{Object.entries(regions).map(([value, region]) => <option value={value} key={value}>{value === "GB" ? "UK" : value}{compact ? "" : ` · ${region.currency}`}</option>)}</select></label>
       <div className="site-search">
         <button ref={trigger} className="search-trigger" type="button" aria-label="Search" aria-expanded={open} aria-controls={searchPanelId} onClick={() => setOpen((value) => !value)}><span className="search-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5.5" /><path d="m15 15 4 4" /></svg></span><span className="search-label">Search</span></button>
       </div>
       {open && <div className="search-panel" id={searchPanelId}>
-        <label><span>Search this site</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try “product engineering”…" autoComplete="off" /></label>
+        <label><span>Search this site</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try “product engineering”…" autoComplete="off" enterKeyHint="search" /></label>
         <p className="label">{normalized ? "Results" : "Trending searches"}</p>
         <div className="search-results">{results.length ? results.map((item) => <Link href={item.href} key={item.href} onClick={() => setOpen(false)}>{item.label}<span aria-hidden="true">↗</span></Link>) : <p>No matching page. Try “services” or “work”.</p>}</div>
       </div>}
