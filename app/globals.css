@@ -35,7 +35,7 @@
   --feature-panel-ink: #1b1c1e;
   --feature-panel-muted: #60646a;
   --feature-rule: #c5c3bd;
-  --feature-shadow: #2a6fc5;
+  --feature-shadow: var(--primary-accent);
   --success: #167249;
   --error: #a81f3d;
   --brand-flow: linear-gradient(
@@ -727,36 +727,24 @@ em,
 }
 .brand-lockup {
   display: grid;
-  grid-template-columns: 30px auto;
-  gap: 7px;
+  grid-template-columns: 36px auto;
+  gap: 8px;
   align-items: center;
 }
 .brand-symbol {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   filter:
     saturate(1.18)
     contrast(1.04)
     drop-shadow(0 0 8px rgba(67, 124, 255, 0.3));
-  transition:
-    filter 0.22s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .brand-wordmark {
-  width: 106px;
+  width: 100px;
   height: auto;
   object-fit: contain;
   filter: none;
-}
-.brand:hover .brand-symbol,
-.brand:focus-visible .brand-symbol {
-  filter:
-    saturate(1.34)
-    contrast(1.06)
-    drop-shadow(0 0 11px rgba(67, 124, 255, 0.48))
-    drop-shadow(0 0 7px rgba(230, 45, 168, 0.2));
-  transform: translateY(-1px) scale(1.035);
 }
 .header-actions {
   display: flex;
@@ -1207,7 +1195,7 @@ em,
   color: var(--on-deep-muted);
 }
 .case-copy .eyebrow {
-  color: var(--signal-on-deep);
+  color: var(--primary-accent);
 }
 .light-link {
   color: var(--on-deep);
@@ -3430,7 +3418,7 @@ em,
 }
 .cookie-consent-head .label {
   margin: 0 0 10px;
-  color: var(--signal-on-deep);
+  color: var(--primary-accent);
 }
 .cookie-consent h2 {
   max-width: 570px;
@@ -3449,12 +3437,12 @@ em,
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: var(--on-deep);
+  color: var(--primary-accent);
   font-size: 0.78rem;
   font-weight: 600;
 }
 .cookie-policy-link span {
-  color: var(--signal-on-deep);
+  color: inherit;
 }
 .cookie-close {
   flex: 0 0 44px;
@@ -3468,6 +3456,10 @@ em,
   color: var(--on-deep);
   font-size: 1.3rem;
   cursor: pointer;
+}
+.cookie-close:hover {
+  border-color: var(--primary-accent);
+  color: var(--primary-accent);
 }
 .cookie-preferences {
   margin-top: 24px;
@@ -3500,7 +3492,7 @@ em,
   width: 20px;
   height: 20px;
   margin: 0;
-  accent-color: var(--accent);
+  accent-color: var(--primary-accent);
 }
 .cookie-preferences input:disabled {
   opacity: 0.72;
@@ -3523,12 +3515,12 @@ em,
   cursor: pointer;
 }
 .cookie-button:hover {
-  border-color: var(--signal-on-deep);
+  border-color: var(--primary-accent);
   background: rgba(255, 255, 255, 0.06);
 }
 .cookie-button-primary {
-  border-color: var(--accent);
-  background: var(--accent);
+  border-color: var(--primary-accent);
+  background: var(--primary-accent);
   color: var(--accent-ink);
 }
 .cookie-button-primary:hover {
@@ -3775,6 +3767,20 @@ em,
 .search-trigger:hover {
   border-color: rgba(255, 255, 255, 0.48);
   background: rgba(255, 255, 255, 0.08);
+}
+.country-control select:focus-visible {
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: none;
+  color: var(--primary-accent);
+}
+.country-control:focus-within::after {
+  border-color: var(--primary-accent);
+}
+.search-trigger:focus-visible {
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: inset 0 -2px 0 var(--primary-accent);
 }
 .search-panel {
   position: absolute;
@@ -4483,15 +4489,15 @@ em,
     height: 64px;
   }
   .brand-lockup {
-    grid-template-columns: 27px auto;
+    grid-template-columns: 30px auto;
     gap: 6px;
   }
   .brand-symbol {
-    width: 27px;
-    height: 27px;
+    width: 30px;
+    height: 30px;
   }
   .brand-wordmark {
-    width: 84px;
+    width: 82px;
   }
   .header-actions {
     gap: 3px;
@@ -4604,12 +4610,12 @@ em,
 
 @media (max-width: 350px) {
   .brand-lockup {
-    grid-template-columns: 23px auto;
+    grid-template-columns: 27px auto;
     gap: 4px;
   }
   .brand-symbol {
-    width: 23px;
-    height: 23px;
+    width: 27px;
+    height: 27px;
   }
   .brand-wordmark {
     width: 72px;
@@ -4632,17 +4638,17 @@ em,
 /* Tablets use the same compact utility bar as mobile, with more room for the brand. */
 @media (min-width: 641px) and (max-width: 1120px) {
   .brand-lockup {
-    grid-template-columns: 28px auto;
-    gap: 6px;
+    grid-template-columns: 34px auto;
+    gap: 7px;
   }
 
   .brand-symbol {
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
   }
 
   .brand-wordmark {
-    width: 100px;
+    width: 94px;
   }
 
   .header-actions {
