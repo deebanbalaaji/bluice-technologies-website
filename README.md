@@ -1,6 +1,13 @@
 # Bluice Technologies website
 
-Corporate product-engineering website built with Next.js App Router, React, and TypeScript. Page and case-study content is statically rendered, while the lead endpoint remains ready for server-side email and CRM integrations.
+Corporate product-engineering website built with Next.js App Router, React, and TypeScript. Pages, services, industries, sectors, regional content, and corporate-responsibility content are statically rendered. The lead endpoint remains ready for server-side email and CRM integration.
+
+## Repository layout
+
+- `app/`: routes, metadata, sitemap, and lead endpoint
+- `components/`: shared navigation, media, regional, industry, and Bluice NXT interfaces
+- `lib/`: structured website, industry, search, and regional content
+- `public/`: optimized brand film and approved website imagery
 
 ## Local development
 
@@ -21,4 +28,4 @@ npm run build
 
 ## Deployment
 
-The repository includes OpenNext and Wrangler configuration for Cloudflare. Configure deployment secrets outside the repository; never expose email, CRM, or scheduling credentials in browser code.
+Deploy from the repository root. Configure email, CRM, analytics, and scheduling credentials only in the hosting provider; never expose them in browser code or commit environment files.

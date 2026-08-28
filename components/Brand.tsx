@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function Brand() {
+export function Brand({ priority = false }: { priority?: boolean }) {
   return (
     <span className="brand-lockup">
       <Image
@@ -9,7 +9,7 @@ export function Brand() {
         alt=""
         width="512"
         height="512"
-        priority
+        priority={priority}
       />
       <Image
         className="brand-wordmark"
@@ -17,7 +17,7 @@ export function Brand() {
         alt="Bluice Technologies"
         width="220"
         height="96"
-        priority
+        priority={priority}
       />
     </span>
   );

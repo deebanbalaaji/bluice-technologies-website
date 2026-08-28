@@ -17,7 +17,7 @@ export async function POST(request: Request) {
   if (required.some((key) => !lead[key])) return NextResponse.json({ error: "Complete every required field." }, { status: 400 });
   if (!emailPattern.test(lead.email)) return NextResponse.json({ error: "Use a valid work email." }, { status: 400 });
   if (lead.consent !== "yes") return NextResponse.json({ error: "Consent is required before sending your enquiry." }, { status: 400 });
-  const payload = { ...lead, source: "bluice-technologies.website", receivedAt: new Date().toISOString() };
+  const payload = { ...lead, source: clean(body.source, 80) || "bluice-technologies.website", receivedAt: new Date().toISOString() };
   try {
     const jobs: Promise<Response>[] = [];
     if (process.env.CRM_WEBHOOK_URL) jobs.push(fetch(process.env.CRM_WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }));

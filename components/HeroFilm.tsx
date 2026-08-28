@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export function HeroFilm() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -20,10 +20,17 @@ export function HeroFilm() {
       revealVideo();
     }
 
+    video.muted = false;
+    setIsMuted(false);
+
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       video.pause();
     } else {
-      void video.play().catch(() => setIsPlaying(false));
+      void video.play().catch(() => {
+        video.muted = true;
+        setIsMuted(true);
+        void video.play().catch(() => setIsPlaying(false));
+      });
     }
 
     return () => {
@@ -56,9 +63,9 @@ export function HeroFilm() {
         className={`hero-film-media${isReady ? " is-ready" : ""}`}
         autoPlay
         loop
-        muted
         playsInline
         preload="metadata"
+        poster="/media/bi-brand-film-poster.jpg"
         aria-label="Bluice Technologies brand film"
         onLoadedData={() => setIsReady(true)}
         onCanPlay={() => setIsReady(true)}

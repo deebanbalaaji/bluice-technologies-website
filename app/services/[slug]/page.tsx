@@ -12,7 +12,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const service = getServiceDetail((await params).slug); if (!service) notFound();
   const index = serviceDetails.findIndex(({ slug }) => slug === service.slug);
   return <main id="main">
-    <header className="service-detail-hero"><div className="shell service-detail-hero-grid"><div><Link className="service-breadcrumb" href="/services">Services <span>/</span> {service.name}</Link><p className="eyebrow">Service 0{index + 1} / 05</p><h1>{service.name}</h1><p className="service-detail-lede">{service.positioning}</p></div><aside><p className="label">Choose this service when</p><p>{service.stage}</p><TrackLink className="text-link" href="/contact" event="cta_clicked" eventLabel={`${service.slug}-hero`}>Discuss your situation <span>↗</span></TrackLink></aside></div></header>
+    <header className={`service-detail-hero contextual-hero service-context-${service.slug}`}><div className="shell service-detail-hero-grid"><div><Link className="service-breadcrumb" href="/services">Services <span>/</span> {service.name}</Link><p className="eyebrow">Service 0{index + 1} / 05</p><h1>{service.name}</h1><p className="service-detail-lede">{service.positioning}</p></div><aside><p className="label">Choose this service when</p><p>{service.stage}</p><TrackLink className="text-link" href="/contact" event="cta_clicked" eventLabel={`${service.slug}-hero`}>Discuss your situation <span>↗</span></TrackLink></aside></div></header>
 
     <section className="service-problem-band"><div className="shell"><p className="label">Common signals</p><ul>{service.problems.map((problem) => <li key={problem}>{problem}</li>)}</ul></div></section>
 

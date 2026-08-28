@@ -1,0 +1,9 @@
+mobile/
+supabase/
+build/
+.github/
+.git/
+.agents/
+.codex/
+coverage/
+*.log

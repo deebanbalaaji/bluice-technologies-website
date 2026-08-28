@@ -54,5 +54,11 @@ coverage/
 
 # Unrelated local projects (not part of this website repository)
 bluice-website/
-rent-ops-mobile/
+mobile/
+supabase/
+app/rentops/
+.github/workflows/mobile.yml
+.github/workflows/supabase.yml
+.github/workflows/supabase-deploy.yml
 CONTEXT.md
+.env*

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { RegionalCareerContext } from "@/components/RegionalCareerContext";
 
 export const metadata: Metadata = {
   title: "Careers",
@@ -62,6 +63,8 @@ export default function CareersPage() {
       <div className="career-principles-band" aria-label="What we value">
         <div className="shell"><span>Clear decisions</span><span>Strong craft</span><span>Direct communication</span><span>Responsibility after release</span></div>
       </div>
+
+      <RegionalCareerContext />
 
       <section className="career-agreement shell">
         <header><p className="eyebrow">The working agreement</p><h2>What you can expect from the team—and what the team needs from you.</h2></header>
