@@ -1,1 +1,1 @@
-export const SITE_RELEASE_LABEL = "Website v4.03.004";
+export const SITE_RELEASE_LABEL = "Website v4.03.006";

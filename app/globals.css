@@ -1686,13 +1686,6 @@ em,
   .about-hero h1 em {
     display: inline;
   }
-  .service-index {
-    margin-inline: -16px;
-    padding-inline: 16px;
-  }
-  .service-index a:first-child {
-    border-left: 0;
-  }
   .service-chapter > article {
     padding-block: 70px;
   }
@@ -6096,49 +6089,51 @@ main { overflow: clip; }
   .investor-hero
 ) {
   --hero-deep: #05070a;
-  --hero-ambient: rgba(80, 186, 255, .1);
+  --hero-ambient: rgba(80, 186, 255, .18);
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: linear-gradient(120deg, var(--hero-deep), #020304 82%);
+  background:
+    radial-gradient(ellipse 88% 115% at 100% 0%, var(--hero-ambient) 0%, transparent 58%),
+    linear-gradient(124deg, color-mix(in srgb, var(--hero-deep) 88%, #0b1720) 0%, var(--hero-deep) 54%, #020304 100%);
 }
 
 .contextual-hero-services {
   --hero-diagram: url("/visuals/hero-engineering-map.svg");
   --hero-deep: #030b13;
-  --hero-ambient: rgba(62, 166, 255, .11);
+  --hero-ambient: rgba(62, 166, 255, .2);
 }
 
-.service-context-product-strategy { --hero-diagram: url("/visuals/hero-decision-tree.svg"); --hero-deep: #080914; --hero-ambient: rgba(112,126,255,.1); }
-.service-context-ux-ui-design { --hero-diagram: url("/visuals/hero-interface-grid.svg"); --hero-deep: #0c0711; --hero-ambient: rgba(194,112,239,.09); }
-.service-context-product-engineering { --hero-diagram: url("/visuals/hero-delivery-pipeline.svg"); --hero-deep: #030d10; --hero-ambient: rgba(64,200,218,.09); }
-.service-context-cloud-platform { --hero-diagram: url("/visuals/hero-cloud-topology.svg"); --hero-deep: #050a13; --hero-ambient: rgba(81,130,231,.1); }
-.service-context-continuous-evolution { --hero-diagram: url("/visuals/hero-feedback-loop.svg"); --hero-deep: #06100b; --hero-ambient: rgba(79,184,123,.09); }
+.service-context-product-strategy { --hero-diagram: url("/visuals/hero-decision-tree.svg"); --hero-deep: #080914; --hero-ambient: rgba(112,126,255,.17); }
+.service-context-ux-ui-design { --hero-diagram: url("/visuals/hero-interface-grid.svg"); --hero-deep: #0c0711; --hero-ambient: rgba(194,112,239,.16); }
+.service-context-product-engineering { --hero-diagram: url("/visuals/hero-delivery-pipeline.svg"); --hero-deep: #030d10; --hero-ambient: rgba(64,200,218,.17); }
+.service-context-cloud-platform { --hero-diagram: url("/visuals/hero-cloud-topology.svg"); --hero-deep: #050a13; --hero-ambient: rgba(81,130,231,.18); }
+.service-context-continuous-evolution { --hero-diagram: url("/visuals/hero-feedback-loop.svg"); --hero-deep: #06100b; --hero-ambient: rgba(79,184,123,.15); }
 
 .contextual-hero-about {
   --hero-diagram: url("/visuals/hero-people-network.svg");
   --hero-deep: #090711;
-  --hero-ambient: rgba(139, 112, 225, .09);
+  --hero-ambient: rgba(139, 112, 225, .16);
 }
 
 .about-hero-editorial h1 {
   color: #f7f8fa;
 }
 
-.company-detail-operating-model { --hero-diagram: url("/visuals/hero-operating-continuity.svg"); --hero-deep: #050b12; --hero-ambient: rgba(77,124,211,.09); }
-.company-detail-leadership { --hero-diagram: url("/visuals/hero-leadership-orbit.svg"); --hero-deep: #0b0710; --hero-ambient: rgba(167,111,211,.09); }
-.company-detail-ways-of-working { --hero-diagram: url("/visuals/hero-working-cadence.svg"); --hero-deep: #040c10; --hero-ambient: rgba(75,169,193,.09); }
-.career-page .career-hero { --hero-diagram: url("/visuals/hero-craft-path.svg"); --hero-deep: #10070c; --hero-ambient: rgba(198,99,139,.08); }
-.contextual-hero-contact { --hero-diagram: url("/visuals/hero-conversation-route.svg"); --hero-deep: #03100f; --hero-ambient: rgba(69,176,169,.08); }
-.gradient-hero-csr { --hero-diagram: url("/visuals/hero-responsibility-balance.svg"); --hero-deep: #06110b; --hero-ambient: rgba(62,164,103,.08); }
-.product-index-hero { --hero-diagram: url("/visuals/hero-product-system.svg"); --hero-deep: #0c0710; --hero-ambient: rgba(144,91,176,.08); }
-.product-detail-zutin .product-detail-hero { --hero-diagram: url("/visuals/hero-property-network.svg"); --hero-deep: #110a05; --hero-ambient: rgba(199,124,58,.08); }
-.product-detail-bluice-nxt .product-detail-hero { --hero-diagram: url("/visuals/hero-knowledge-star.svg"); --hero-deep: #070915; --hero-ambient: rgba(104,126,226,.09); }
-.legal-hero-privacy { --hero-diagram: url("/visuals/hero-governance-grid.svg"); --hero-deep: #040b12; --hero-ambient: rgba(71,143,190,.08); }
-.legal-hero-terms { --hero-diagram: url("/visuals/hero-contract-lines.svg"); --hero-deep: #100b06; --hero-ambient: rgba(171,124,69,.08); }
-.legal-hero-cookies { --hero-diagram: url("/visuals/hero-consent-rings.svg"); --hero-deep: #0b0711; --hero-ambient: rgba(143,101,190,.08); }
-.legal-hero-accessibility { --hero-diagram: url("/visuals/hero-access-path.svg"); --hero-deep: #03100f; --hero-ambient: rgba(67,170,166,.08); }
-.investor-hero { --hero-diagram: url("/visuals/hero-investor-ledger.svg"); --hero-deep: #050a13; --hero-ambient: rgba(70,123,211,.08); }
+.company-detail-operating-model { --hero-diagram: url("/visuals/hero-operating-continuity.svg"); --hero-deep: #050b12; --hero-ambient: rgba(77,124,211,.16); }
+.company-detail-leadership { --hero-diagram: url("/visuals/hero-leadership-orbit.svg"); --hero-deep: #0b0710; --hero-ambient: rgba(167,111,211,.16); }
+.company-detail-ways-of-working { --hero-diagram: url("/visuals/hero-working-cadence.svg"); --hero-deep: #040c10; --hero-ambient: rgba(75,169,193,.16); }
+.career-page .career-hero { --hero-diagram: url("/visuals/hero-craft-path.svg"); --hero-deep: #10070c; --hero-ambient: rgba(198,99,139,.14); }
+.contextual-hero-contact { --hero-diagram: url("/visuals/hero-conversation-route.svg"); --hero-deep: #03100f; --hero-ambient: rgba(69,176,169,.15); }
+.gradient-hero-csr { --hero-diagram: url("/visuals/hero-responsibility-balance.svg"); --hero-deep: #06110b; --hero-ambient: rgba(62,164,103,.15); }
+.product-index-hero { --hero-diagram: url("/visuals/hero-product-system.svg"); --hero-deep: #0c0710; --hero-ambient: rgba(144,91,176,.15); }
+.product-detail-zutin .product-detail-hero { --hero-diagram: url("/visuals/hero-property-network.svg"); --hero-deep: #110a05; --hero-ambient: rgba(199,124,58,.14); }
+.product-detail-bluice-nxt .product-detail-hero { --hero-diagram: url("/visuals/hero-knowledge-star.svg"); --hero-deep: #070915; --hero-ambient: rgba(104,126,226,.16); }
+.legal-hero-privacy { --hero-diagram: url("/visuals/hero-governance-grid.svg"); --hero-deep: #040b12; --hero-ambient: rgba(71,143,190,.14); }
+.legal-hero-terms { --hero-diagram: url("/visuals/hero-contract-lines.svg"); --hero-deep: #100b06; --hero-ambient: rgba(171,124,69,.14); }
+.legal-hero-cookies { --hero-diagram: url("/visuals/hero-consent-rings.svg"); --hero-deep: #0b0711; --hero-ambient: rgba(143,101,190,.14); }
+.legal-hero-accessibility { --hero-diagram: url("/visuals/hero-access-path.svg"); --hero-deep: #03100f; --hero-ambient: rgba(67,170,166,.14); }
+.investor-hero { --hero-diagram: url("/visuals/hero-investor-ledger.svg"); --hero-deep: #050a13; --hero-ambient: rgba(70,123,211,.15); }
 
 :is(
   .services-hero,
@@ -6159,7 +6154,7 @@ main { overflow: clip; }
   width: min(72vw, 960px);
   display: block;
   background: var(--hero-diagram) right center / contain no-repeat;
-  opacity: .3;
+  opacity: .36;
   content: "";
   pointer-events: none;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 40%, #000 100%);
@@ -6183,8 +6178,9 @@ main { overflow: clip; }
   inset: 0;
   display: block;
   background:
-    linear-gradient(90deg, color-mix(in srgb, var(--hero-deep) 98%, transparent) 0%, color-mix(in srgb, var(--hero-deep) 92%, transparent) 46%, rgba(2, 3, 4, .36) 80%, rgba(2, 3, 4, .5) 100%),
-    radial-gradient(circle at 84% 45%, var(--hero-ambient), transparent 36%);
+    linear-gradient(90deg, color-mix(in srgb, var(--hero-deep) 94%, transparent) 0%, color-mix(in srgb, var(--hero-deep) 82%, transparent) 46%, rgba(2, 3, 4, .28) 80%, rgba(2, 3, 4, .42) 100%),
+    radial-gradient(ellipse 64% 82% at 86% 42%, var(--hero-ambient) 0%, transparent 68%),
+    linear-gradient(146deg, rgba(142, 220, 255, .035) 0%, transparent 42%);
   content: "";
   pointer-events: none;
 }
@@ -6211,6 +6207,13 @@ main { overflow: clip; }
 
 .scroll-motion-ready .scroll-reveal.is-revealing {
   will-change: opacity, transform;
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  .scroll-motion-ready .motion-side,
+  .scroll-motion-ready .motion-side.motion-side-reverse {
+    transform: translate3d(0, 20px, 0);
+  }
 }
 
 @media (max-width: 760px) {
@@ -6247,13 +6250,13 @@ main { overflow: clip; }
     .product-detail-hero
   )::after {
     background:
-      linear-gradient(90deg, color-mix(in srgb, var(--hero-deep) 98%, transparent), color-mix(in srgb, var(--hero-deep) 86%, transparent)),
-      radial-gradient(circle at 90% 35%, var(--hero-ambient), transparent 42%);
+      linear-gradient(112deg, color-mix(in srgb, var(--hero-deep) 95%, transparent) 0%, color-mix(in srgb, var(--hero-deep) 84%, transparent) 68%, rgba(2, 3, 4, .4) 100%),
+      radial-gradient(ellipse 92% 62% at 92% 24%, var(--hero-ambient) 0%, transparent 64%);
   }
 
   .scroll-motion-ready .motion-rise { transform: translate3d(0, 17px, 0); }
-  .scroll-motion-ready .motion-side { transform: translate3d(14px, 0, 0); }
-  .scroll-motion-ready .motion-side.motion-side-reverse { transform: translate3d(-14px, 0, 0); }
+  .scroll-motion-ready .motion-side,
+  .scroll-motion-ready .motion-side.motion-side-reverse { transform: translate3d(0, 14px, 0); }
   .scroll-motion-ready .motion-veil { transform: translate3d(0, 8px, 0); clip-path: inset(0 0 10% 0); }
   .scroll-motion-ready .scroll-reveal { transition-duration: 580ms, 580ms, 640ms; }
 }
