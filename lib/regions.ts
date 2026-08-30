@@ -3,7 +3,7 @@ const commonCareerPractices = ["Product strategy", "Product design", "Product en
 export const regions = {
   IN: {
     name: "India", currency: "INR", symbol: "₹", marketLine: "India delivery / Global product teams", footerLine: "India / Global delivery",
-    image: "/media/regions/in-main-v2.jpg", imageAlt: "Professionals collaborating over a laptop in an Ahmedabad office",
+    image: "/media/regions/in-main-professionals-v4.jpg", imageAlt: "Indian professionals collaborating on a product discussion with a laptop",
     marketHeadline: "Build for scale, access, and operational diversity.",
     marketIntroduction: "In India, we design for multilingual journeys, mixed device conditions, high-volume services, and operations that connect metro, tier-two, and distributed teams.",
     cultureNote: "Local context means respecting language, accessibility, regional difference, and the many ways people access essential and commercial services. We do not reduce that diversity to a single cultural assumption.",

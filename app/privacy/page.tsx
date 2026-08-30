@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <main id="main" className="legal-page">
-      <header className="legal-hero shell"><p className="eyebrow">Legal</p><h1>Privacy Policy</h1><p>Effective 17 July 2026</p></header>
+      <header className="legal-hero legal-hero-privacy shell"><p className="eyebrow">Legal</p><h1>Privacy Policy</h1><p>Effective 17 July 2026</p></header>
       <article className="legal-content shell">
         <p className="legal-intro">This policy explains how Bluice Technologies (“we”, “us” or “our”) handles personal information when you visit this website, contact us or book a consultation.</p>
         <RegionalLegalNotice kind="privacy" />

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function AccessibilityStatementPage() {
   return (
     <main id="main" className="legal-page">
-      <header className="legal-hero shell"><p className="eyebrow">Accessibility</p><h1>Accessibility Statement</h1><p>Updated 18 July 2026</p></header>
+      <header className="legal-hero legal-hero-accessibility shell"><p className="eyebrow">Accessibility</p><h1>Accessibility Statement</h1><p>Updated 18 July 2026</p></header>
       <article className="legal-content shell">
         <p className="legal-intro">Bluice Technologies is committed to making this website clear, usable and accessible to as many people as possible.</p>
 

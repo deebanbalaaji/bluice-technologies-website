@@ -15,7 +15,7 @@ export const regionalMedia: Record<RegionCode, RegionalMedia> = {
   IN: {
     homePrimary: { src: "/media/regions/modules/in-home-primary-v2.jpg", alt: "Women coordinating textile operations with computers in India" },
     homeSecondary: { src: "/media/regions/modules/in-home-secondary-v2.jpg", alt: "Indian textile specialists using workplace technology" },
-    responsibility: { src: "/media/regions/modules/in-responsibility-v2.jpg", alt: "Workers collaborating inside an industrial workplace in Punjab" },
+    responsibility: { src: "/media/regions/modules/in-responsibility-csr-v3.jpg", alt: "Children attending a community learning session in rural Bihar, India" },
     career: { src: "/media/regions/modules/in-career-v2.jpg", alt: "Indian business professional working at a laptop" },
     csrInclusive: { src: "/media/regions/modules/in-csr-inclusive-v2.jpg", alt: "Young professional carrying a laptop through an Indian neighbourhood" },
     csrEnvironment: { src: "/media/regions/modules/in-csr-environment-v2.jpg", alt: "A uniformed worker in a shaded Mumbai street" },

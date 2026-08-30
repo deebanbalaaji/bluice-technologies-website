@@ -5,9 +5,12 @@ All regional photographs are local, static copies of free-to-use Pexels images. 
 ## India
 
 - `in-main-v2.jpg` — Fahad Puthawala, Ahmedabad, photo 31786661
+- `in-main-jaipur-v3.jpg` — Biyani Girls College, Jaipur, photo 18067562
+- `in-main-professionals-v4.jpg` — Ketut Subiyanto, Pexels photo 4308091
 - `in-home-primary-v2.jpg` — EqualStock IN, India, photo 31259265
 - `in-home-secondary-v2.jpg` — EqualStock IN, India, photo 31321061
 - `in-responsibility-v2.jpg` — VCHAU Voyage LLP, Punjab, photo 10861034
+- `in-responsibility-csr-v3.jpg` — TEGHRA DACCHIN TOLA, Kishanganj, India, Pexels photo 35152622
 - `in-career-v2.jpg` — Amirul Islam, India, photo 35964702
 - `in-csr-inclusive-v2.jpg` — Sanket Mishra, India, photo 15598883
 - `in-csr-environment-v2.jpg` — Keval Waghela, Mumbai, photo 33000403

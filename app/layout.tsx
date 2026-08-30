@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 import { RegionProvider } from "@/components/RegionProvider";
 import { CookieConsent } from "@/components/CookieConsent";
 import { BluiceNxt } from "@/components/BluiceNxt";
+import { ScrollMotion } from "@/components/ScrollMotion";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bluice.in";
 
@@ -32,5 +33,5 @@ const organizationSchema = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" data-scroll-behavior="smooth"><body><RegionProvider><a className="skip-link" href="#main">Skip to content</a><Header />{children}<Footer /><CookieConsent /><BluiceNxt /></RegionProvider><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} /></body></html>;
+  return <html lang="en" data-scroll-behavior="smooth"><body><RegionProvider><a className="skip-link" href="#main">Skip to content</a><Header />{children}<Footer /><CookieConsent /><BluiceNxt /><ScrollMotion /></RegionProvider><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} /></body></html>;
 }

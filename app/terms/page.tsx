@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <main id="main" className="legal-page">
-      <header className="legal-hero shell"><p className="eyebrow">Legal</p><h1>Terms &amp; Conditions</h1><p>Effective 17 July 2026</p></header>
+      <header className="legal-hero legal-hero-terms shell"><p className="eyebrow">Legal</p><h1>Terms &amp; Conditions</h1><p>Effective 17 July 2026</p></header>
       <article className="legal-content shell">
         <p className="legal-intro">These terms govern your use of this website. By accessing it, you agree to these terms. If you do not agree, please do not use the website.</p>
         <RegionalLegalNotice kind="terms" />

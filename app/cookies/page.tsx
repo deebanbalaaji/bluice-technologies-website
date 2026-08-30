@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function CookiePolicyPage() {
   return (
     <main id="main" className="legal-page">
-      <header className="legal-hero shell"><p className="eyebrow">Legal</p><h1>Cookie Policy</h1><p>Effective 18 July 2026</p></header>
+      <header className="legal-hero legal-hero-cookies shell"><p className="eyebrow">Legal</p><h1>Cookie Policy</h1><p>Effective 18 July 2026</p></header>
       <article className="legal-content shell">
         <p className="legal-intro">This policy explains how Bluice Technologies uses cookies, browser storage and similar technologies on this website.</p>
 

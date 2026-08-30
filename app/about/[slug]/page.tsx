@@ -15,7 +15,7 @@ export default async function CompanyDetailPage({ params }: { params: Promise<{ 
   const page = getCompanyPage((await params).slug);
   if (!page) notFound();
   return <main id="main" className="company-detail">
-    <header className="company-detail-hero contextual-hero contextual-hero-company shell"><nav aria-label="Breadcrumb"><Link href="/about">Who we are</Link><span>/</span><b>{page.title}</b></nav><h1>{page.headline}</h1><p>{page.introduction}</p></header>
+    <header className={`company-detail-hero contextual-hero contextual-hero-company company-detail-${page.slug} shell`}><nav aria-label="Breadcrumb"><Link href="/about">Who we are</Link><span>/</span><b>{page.title}</b></nav><h1>{page.headline}</h1><p>{page.introduction}</p></header>
     <section className="company-detail-ledger shell">{page.sections.map(([title, detail], index) => <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><h2>{title}</h2><p>{detail}</p></article>)}</section>
     <CTA />
   </main>;

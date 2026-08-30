@@ -37,6 +37,17 @@ const menuGroups = [
     ],
   },
   {
+    id: "products",
+    label: "Products",
+    href: "/products",
+    eyebrow: "Bluice product portfolio",
+    description: "Focused products for tenant operations and AI-assisted business discovery, with clear scope and responsible information practices.",
+    links: [
+      ["Zutin tenant operations", "/products/zutin"],
+      ["Bluice NXT AI ecosystem", "/products/bluice-nxt"],
+    ],
+  },
+  {
     id: "about",
     label: "Who we are",
     href: "/about",
@@ -183,17 +194,6 @@ export function SiteNavigation() {
             </div>
           );
         })}
-        <Link
-          className="desktop-nav-direct"
-          href="/careers"
-          aria-current={current("/careers") ? "page" : undefined}
-          onClick={() => {
-            cancelScheduledClose();
-            setOpenMenu(null);
-          }}
-        >
-          Careers
-        </Link>
       </nav>
 
       <details className="mobile-menu" ref={mobileMenu} onToggle={(event) => setMobileOpen(event.currentTarget.open)}>
@@ -216,7 +216,6 @@ export function SiteNavigation() {
               </div>
             </details>
           ))}
-          <Link href="/careers" onClick={closeMobileMenu} aria-current={current("/careers") ? "page" : undefined}>Careers</Link>
           <Link href="/contact" onClick={closeMobileMenu} aria-current={current("/contact") ? "page" : undefined}>Contact us</Link>
         </nav>
       </details>
