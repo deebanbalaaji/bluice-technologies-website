@@ -6029,6 +6029,40 @@ main { overflow: clip; }
   .footer-navigation-grid a { min-height: 0; }
 }
 
+@media (min-width:761px) and (max-width:980px) {
+  .classic-footer-main {
+    gap: 44px;
+    padding-block: 52px 44px;
+  }
+  .classic-footer-links {
+    max-width: none;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 36px clamp(48px,9vw,80px);
+  }
+  .classic-footer-links .footer-navigation {
+    grid-column: 1 / -1;
+  }
+  .footer-navigation-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 8px clamp(48px,9vw,80px);
+  }
+  .classic-footer-base {
+    min-height: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding-block: 18px 22px;
+  }
+  .classic-footer-release {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .classic-footer-base nav {
+    flex-wrap: wrap;
+    gap: 8px 24px;
+  }
+}
+
 @media (max-width:760px) {
   .classic-footer-links {
     grid-template-columns: 1fr;
