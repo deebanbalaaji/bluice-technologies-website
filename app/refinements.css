@@ -1,0 +1,152 @@
+/* Shared layout rhythm: content first, consistent gutters, stable interactions. */
+:root {
+  --layout-space: clamp(64px, 7vw, 104px);
+  --layout-gap: clamp(24px, 3vw, 40px);
+}
+
+main h2 { line-height: 1.12; }
+main h3 { line-height: 1.2; }
+main p { line-height: 1.7; }
+main [id] { scroll-margin-top: 132px; }
+
+.home-value,
+.home-capabilities,
+.home-media-story,
+.home-responsibility,
+.home-industry-reel,
+.regional-brief,
+.industry-operating,
+.industry-sectors,
+.industry-capability-map,
+.csr-position,
+.csr-commitments-v2,
+.product-position,
+.product-principles { padding-block: var(--layout-space); }
+
+.home-capabilities > header,
+.product-catalog > header { margin-bottom: var(--layout-gap); }
+
+/* Service choices form a consistent, fully clickable card collection. */
+.home-capability-grid {
+  gap: 16px;
+  border: 0;
+}
+.home-capability-grid > a:nth-child(n) {
+  grid-column: auto;
+  min-height: 0;
+  grid-template-rows: auto 1fr auto auto;
+  padding: clamp(24px, 3vw, 36px);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--white);
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+.home-capability-grid > a:last-child { grid-column: 1 / -1; }
+.home-capability-grid h3 { margin-bottom: 14px; }
+.home-capability-grid p { margin-bottom: 0; }
+.home-capability-grid span { margin-top: 24px; line-height: 1.6; }
+.home-capability-grid b { margin-top: 16px; }
+.home-capability-grid > a:focus-visible {
+  border-color: var(--accent);
+  outline-offset: 3px;
+}
+
+/* Photography introduces each industry; solid panels keep the copy readable. */
+.industry-slider-controls { align-items: center; }
+.industry-slider-position {
+  margin-right: auto;
+  color: var(--on-deep-muted);
+  font: 500 .75rem/1.5 "IBM Plex Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
+.industry-slider-controls button:disabled { opacity: .35; cursor: default; }
+.industry-slider-track { padding-block: 4px 12px; scroll-snap-type: x proximity; }
+.industry-slide {
+  flex-basis: clamp(300px, 33vw, 440px);
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--panel-line);
+  border-radius: 4px;
+}
+.industry-slide::after { display: none; }
+.industry-slide-media { position: relative; z-index: auto; inset: auto; aspect-ratio: 16 / 10; overflow: hidden; flex-shrink: 0; }
+.industry-slide-copy { position: static; flex: 1; display: flex; flex-direction: column; padding: 24px; }
+.industry-slide h3 { max-width: none; font-size: clamp(1.5rem, 2.2vw, 2rem); line-height: 1.2; }
+.industry-slide p { margin-bottom: 24px; color: var(--on-deep-muted); }
+.industry-slide b { margin-top: auto; padding-top: 8px; color: var(--signal-on-deep); }
+.industry-slide:focus-visible { outline-color: var(--primary-accent); outline-offset: -3px; }
+
+.industry-directory-copy p,
+.product-catalog-row p,
+.service-fit p { max-width: 65ch; }
+.industry-directory-image { border-radius: 4px; }
+
+/* Keep focus and form feedback clear without shifting the surrounding layout. */
+.site-header :is(a, button, summary):focus-visible,
+.site-footer :is(a, button):focus-visible {
+  outline: 2px solid var(--primary-accent);
+  outline-offset: 3px;
+}
+.lead-form :is(input:not([type="checkbox"]), select, textarea):hover {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--accent);
+}
+.scroll-motion-ready .scroll-reveal.is-revealed,
+.scroll-motion-ready .scroll-reveal:focus-within {
+  opacity: 1;
+  transform: none;
+  clip-path: none;
+}
+
+@media (hover: hover) {
+  .home-capability-grid > a:hover {
+    border-color: var(--accent);
+    background: #f1f7fc;
+  }
+  .industry-slide:hover { border-color: var(--primary-accent); }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  .home-capabilities > header { grid-template-columns: 1fr; gap: 20px; }
+  .home-capabilities > header h2 { max-width: 22ch; }
+}
+
+@media (max-width: 700px) {
+  :root { --shell: calc(100% - 40px); --layout-space: 64px; }
+  .home-capability-grid { gap: 12px; }
+  .home-capability-grid > a:last-child { grid-column: auto; }
+  .home-capability-grid h3 { font-size: 1.5rem; }
+  .industry-slider-controls { width: var(--shell); }
+  .industry-slider-track { padding-inline: 20px; scroll-padding-inline: 20px; gap: 16px; }
+  .industry-slide { flex-basis: min(86vw, 400px); }
+  .industry-slide-copy { padding: 24px 20px; }
+  .home-media-lead,
+  .home-responsibility-image,
+  .industry-directory-image { min-height: 0; aspect-ratio: 4 / 3; }
+  .services-hero,
+  .service-detail-hero-grid,
+  .connect-hero,
+  .company-detail-hero,
+  .legal-hero { min-height: 0; padding-block: 64px; }
+  .services-hero,
+  .service-detail-hero-grid,
+  .connect-hero { gap: 32px; }
+  .service-detail-hero .eyebrow { margin-top: 32px; }
+  .service-detail-hero h1,
+  .services-hero h1,
+  .connect-hero h1,
+  .company-detail-hero h1,
+  .legal-hero h1 { font-size: clamp(2.5rem, 10.5vw, 3.75rem); line-height: 1.08; }
+  .home-capabilities > header h2 { font-size: clamp(2rem, 8.5vw, 3rem); }
+  .product-catalog-row { grid-template-columns: 24px minmax(0, 1fr) 24px; gap: 12px; }
+  .lead-form :is(input, select, textarea) { font-size: 16px; }
+  .classic-footer-base nav > :is(a, button) { min-height: 44px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-capability-grid > a,
+  .industry-slide,
+  .industry-slide img { transition: none; }
+}

@@ -5,6 +5,7 @@ import "@fontsource/public-sans/500.css";
 import "@fontsource/public-sans/600.css";
 import "@fontsource/ibm-plex-mono/500.css";
 import "./globals.css";
+import "./refinements.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { RegionProvider } from "@/components/RegionProvider";
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f6f6f3",
+  themeColor: "#070809",
 };
 
 const organizationSchema = {

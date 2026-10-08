@@ -55,7 +55,7 @@ export function ScrollMotion() {
               element.classList.add("is-revealing", "is-revealed");
               observer?.unobserve(element);
             });
-          }, { rootMargin: "0px 0px -12%", threshold: 0.08 });
+          }, { rootMargin: "0px 0px -40px", threshold: 0 });
 
           elements.filter((element) => !element.classList.contains("is-revealed")).forEach((element) => observer?.observe(element));
         });
